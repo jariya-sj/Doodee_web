@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}DooDeeVision{% endblock %}</title>
+  <meta name="description" content="DooDeeVision — เทคโนโลยีเพื่อการสื่อสารและการปรึกษาที่ชัดเจนยิ่งขึ้น">
+  <meta name="theme-color" content="#0B1F2A">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        navy:'#0B1F2A', ink:'#162831', teal:'#0F766E', mint:'#CDEBE4', cloud:'#F5F7F6', line:'#DCE4E1', gold:'#C9A96E'
+      }}}
+    }
+  </script>
+  <link rel="stylesheet" href="{% static 'core/css/site.css' %}">
+</head>
+<body class="bg-white text-ink antialiased">
+  <div class="bg-navy text-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2.5 text-xs lg:px-8">
+      <p class="font-medium tracking-wide text-white/75">DOODEEVISION · CLINICAL VISUALIZATION TECHNOLOGY</p>
+      <a href="{% url 'core:contact' %}" class="hidden font-semibold text-white/90 hover:text-white sm:inline">ติดต่อทีมงาน <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur-xl">
+    <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
+      <a href="{% url 'core:home' %}" class="group flex items-center gap-3" aria-label="DooDeeVision home">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-navy text-sm font-extrabold text-white shadow-sm transition group-hover:bg-teal">D</span>
+        <span>
+          <span class="brand block text-[19px] font-extrabold leading-none text-navy">DooDeeVision</span>
+          <span class="mt-1 block text-[9px] font-semibold uppercase tracking-[.22em] text-black/40">A clearer vision of care</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-[14px] font-medium lg:flex" aria-label="Main navigation">
+        <a class="nav-link" href="{% url 'core:home' %}">หน้าหลัก</a>
+        <a class="nav-link" href="{% url 'core:about' %}">เกี่ยวกับเรา</a>
+        <a class="nav-link" href="{% url 'core:products' %}">ผลิตภัณฑ์</a>
+        <a class="nav-link" href="{% url 'core:partners' %}">พันธมิตรของเรา</a>
+        <a class="nav-link" href="{% url 'core:contact' %}">ติดต่อเรา</a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="{% url 'core:contact' %}" class="btn-primary">นัดสาธิตระบบ <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <button data-menu-button class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line text-navy lg:hidden" aria-label="เปิดเมนู" aria-expanded="false">
+        <span class="menu-icon"></span>
+      </button>
+    </div>
+    <div data-mobile-menu class="hidden border-t border-line bg-white px-5 py-5 lg:hidden">
+      <div class="grid gap-1 text-sm font-medium">
+        <a class="mobile-link" href="{% url 'core:home' %}">หน้าหลัก</a>
+        <a class="mobile-link" href="{% url 'core:about' %}">เกี่ยวกับเรา</a>
+        <a class="mobile-link" href="{% url 'core:products' %}">ผลิตภัณฑ์</a>
+        <a class="mobile-link" href="{% url 'core:partners' %}">พันธมิตรของเรา</a>
+        <a class="mobile-link" href="{% url 'core:contact' %}">ติดต่อเรา</a>
+        <a class="btn-primary mt-3 justify-center" href="{% url 'core:contact' %}">นัดสาธิตระบบ ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>{% block content %}{% endblock %}</main>
+
+  <footer class="bg-navy text-white">
+    <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
+      <div class="grid gap-12 border-b border-white/10 pb-12 lg:grid-cols-[1.5fr_.7fr_.7fr_1fr]">
+        <div>
+          <div class="brand text-2xl font-extrabold">DooDeeVision</div>
+          <p class="mt-4 max-w-sm text-sm leading-7 text-white/60">เทคโนโลยีที่ช่วยให้การสื่อสารเรื่องใบหน้าชัดเจนขึ้น ผ่านผลิตภัณฑ์ที่ออกแบบสำหรับคลินิกและผู้ใช้งานทั่วไป</p>
+        </div>
+        <div>
+          <p class="footer-label">COMPANY</p>
+          <div class="mt-4 grid gap-3 text-sm text-white/70">
+            <a class="footer-link" href="{% url 'core:about' %}">เกี่ยวกับเรา</a>
+            <a class="footer-link" href="{% url 'core:partners' %}">พันธมิตรของเรา</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-label">PRODUCTS</p>
+          <div class="mt-4 grid gap-3 text-sm text-white/70">
+            <a class="footer-link" href="{% url 'core:products' %}#doodeeapp">DooDeeApp</a>
+            <a class="footer-link" href="{% url 'core:products' %}#doodeeclinic">DooDeeClinic 3D</a>
+            <a class="footer-link" href="{% url 'core:products' %}#doodeeagency">DooDeeAgency</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-label">CONTACT</p>
+          <a href="mailto:doodeeontop01@gmail.com" class="mt-4 block break-all text-sm font-medium text-white/80 hover:text-white">doodeeontop01@gmail.com</a>
+          <a href="{% url 'core:contact' %}" class="mt-5 inline-flex text-sm font-semibold text-white">ติดต่อทีมงาน ↗</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 DooDeeVision. All rights reserved.</p>
+        <p>A clearer vision of care.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="{% static 'core/js/site.js' %}"></script>
+</body>
+</html>

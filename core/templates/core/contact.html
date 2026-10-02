@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% block title %}ติดต่อเรา | DooDeeVision{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+    <p class="section-kicker">CONTACT</p>
+    <h1 class="display mt-6 max-w-5xl text-5xl font-extrabold leading-[1.08] tracking-[-.045em] text-navy lg:text-7xl">เริ่มต้นการพูดคุย<br><span class="text-teal">กับทีมของเรา</span></h1>
+  </div>
+</section>
+<section class="bg-white section-pad">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.75fr_1.25fr] lg:gap-20 lg:px-8">
+    <aside>
+      <p class="section-kicker">GET IN TOUCH</p>
+      <h2 class="display mt-4 text-3xl font-extrabold text-navy">ช่องทางติดต่อ</h2>
+      <p class="mt-5 text-sm leading-7 text-black/55">สอบถามข้อมูลผลิตภัณฑ์ การนัดสาธิตระบบ หรือความร่วมมือทางธุรกิจ</p>
+      <div class="mt-8 border-t border-line pt-6"><p class="text-xs font-bold tracking-[.15em] text-black/35">EMAIL</p><a href="mailto:doodeeontop01@gmail.com" class="mt-2 block break-all text-base font-bold text-navy hover:text-teal">doodeeontop01@gmail.com</a></div>
+      <div class="mt-8 rounded-2xl bg-[#F1F5F3] p-5 text-xs leading-6 text-black/45">แบบฟอร์มนี้จะเปิดโปรแกรมอีเมลของผู้ใช้พร้อมข้อความที่กรอกไว้ เว็บไซต์ตัวอย่างยังไม่ได้บันทึกข้อมูลลงฐานข้อมูล</div>
+    </aside>
+    <form id="contact-form" class="contact-form">
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label>ชื่อผู้ติดต่อ<input name="name" required placeholder="ชื่อของคุณ"></label>
+        <label>คลินิก / หน่วยงาน<input name="company" placeholder="องค์กรของคุณ"></label>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label>อีเมล<input name="email" type="email" required placeholder="you@example.com"></label>
+        <label>เรื่องที่สนใจ<select name="interest"><option>DooDeeApp</option><option>DooDeeClinic 3D</option><option>DooDeeAgency</option><option>Partnership</option><option>อื่น ๆ</option></select></label>
+      </div>
+      <label>รายละเอียด<textarea name="message" rows="6" placeholder="เล่ารายละเอียดที่ต้องการสอบถาม"></textarea></label>
+      <div class="flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between"><p class="text-xs text-black/40">เราจะใช้ข้อมูลนี้เพื่อเตรียมข้อความอีเมลเท่านั้น</p><button class="btn-primary" type="submit">เตรียมอีเมลติดต่อ ↗</button></div>
+    </form>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% block title %}พันธมิตรของเรา | DooDeeVision{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+    <p class="section-kicker">OUR PARTNERS</p>
+    <div class="mt-6 grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+      <h1 class="display max-w-4xl text-5xl font-extrabold leading-[1.08] tracking-[-.045em] text-navy lg:text-7xl">สร้างสิ่งที่ดีขึ้น<br><span class="text-teal">ไปด้วยกัน</span></h1>
+      <p class="max-w-xl text-base leading-8 text-black/58">พื้นที่สำหรับนำเสนอเครือข่ายพันธมิตร คลินิก องค์กร และผู้ร่วมพัฒนาที่ทำงานร่วมกับ DooDeeVision</p>
+    </div>
+  </div>
+</section>
+<section class="bg-white section-pad">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="rounded-[28px] border border-line bg-[#F7F9F8] p-8 lg:p-12">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% for x in '123456' %}
+        <div class="partner-placeholder"><div class="partner-symbol">P{{ x }}</div><div><p class="text-sm font-bold text-navy">Partner name</p><p class="mt-1 text-xs text-black/40">Logo & partner information</p></div></div>
+        {% endfor %}
+      </div>
+      <p class="mt-8 text-xs leading-6 text-black/40">* ส่วนนี้เป็น placeholder สำหรับใส่ชื่อ โลโก้ และรายละเอียดพันธมิตรจริงของบริษัทภายหลัง</p>
+    </div>
+  </div>
+</section>
+<section class="bg-navy text-white">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:px-8 lg:py-24">
+    <div><p class="text-xs font-bold tracking-[.2em] text-[#74C7BB]">LET'S WORK TOGETHER</p><h2 class="display mt-5 text-4xl font-extrabold leading-tight lg:text-5xl">สนใจร่วมสร้างความร่วมมือกับ DooDeeVision?</h2></div>
+    <div><p class="text-sm leading-7 text-white/55">พูดคุยเกี่ยวกับการทดลองใช้งาน การร่วมพัฒนาผลิตภัณฑ์ หรือความร่วมมือทางธุรกิจ</p><a href="{% url 'core:contact' %}" class="btn-light mt-7">ติดต่อทีมงาน ↗</a></div>
+  </div>
+</section>
+{% endblock %}

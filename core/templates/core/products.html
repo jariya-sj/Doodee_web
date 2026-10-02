@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% block title %}ผลิตภัณฑ์ | DooDeeVision{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+    <p class="section-kicker">OUR PRODUCT FAMILY</p>
+    <h1 class="display mt-6 max-w-5xl text-5xl font-extrabold leading-[1.08] tracking-[-.045em] text-navy lg:text-7xl">ผลิตภัณฑ์ต่างกัน<br><span class="text-teal">เป้าหมายเดียวกัน</span></h1>
+    <p class="mt-7 max-w-2xl text-base leading-8 text-black/58">เทคโนโลยีที่ช่วยให้มองเห็นความต้องการได้ชัดเจน สำหรับคลินิกและผู้ใช้งานทั่วไป</p>
+  </div>
+</section>
+
+<section id="doodeeapp" class="product-detail bg-white">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
+    <div class="detail-visual bg-[#DCEFEA]"><div class="phone-frame phone-large"><div class="phone-screen"><span class="text-sm font-extrabold text-navy">doodee</span><div class="scan-face scan-face-lg"></div><div class="scan-lines"></div></div></div></div>
+    <div>
+      <p class="product-meta">01 · B2C / 2D VISUALIZATION</p>
+      <h2 class="display mt-4 text-5xl font-extrabold text-navy">DooDeeApp</h2>
+      <p class="mt-6 text-base leading-8 text-black/60">ผลิตภัณฑ์สำหรับผู้ใช้งานทั่วไป ใช้วิเคราะห์ใบหน้าและจำลองหัตถการแบบ 2D ดูได้ในมุมตรง 45° และ 90° ปัจจุบันใช้งานผ่านเว็บ</p>
+      <div class="feature-list mt-8"><p><span>01</span>วิเคราะห์และดูภาพจำลองแบบ 2D</p><p><span>02</span>รองรับมุมตรง 45° และ 90°</p><p><span>03</span>ใช้เป็นข้อมูลประกอบการสื่อสารก่อนการปรึกษา</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="doodeeclinic" class="product-detail bg-[#F3F5F8]">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
+    <div class="order-2 lg:order-1">
+      <p class="product-meta">02 · B2B / 3D SOFTWARE</p>
+      <h2 class="display mt-4 text-5xl font-extrabold text-navy">DooDeeClinic 3D</h2>
+      <p class="mt-6 text-base leading-8 text-black/60">ซอฟต์แวร์ 3D สำหรับคลินิก ใช้นำเข้า เปิดดู และปรับโมเดลใบหน้าที่สร้างจากมือถือผ่านแอปสแกนภายนอก เพื่อใช้ประกอบการปรึกษา</p>
+      <div class="feature-list mt-8"><p><span>01</span>สร้างโมเดลด้วยแอปสแกนภายนอก</p><p><span>02</span>เตรียมและนำเข้าไฟล์โมเดล</p><p><span>03</span>เปิดดูและปรับรายละเอียดใน DooDeeClinic</p><p><span>04</span>ใช้ประกอบการปรึกษาร่วมกับแพทย์</p></div>
+    </div>
+    <div class="detail-visual order-1 bg-[#E8ECF4] lg:order-2"><div class="model-stage model-stage-lg"><div class="model-head"></div><span class="axis axis-x"></span><span class="axis axis-y"></span></div></div>
+  </div>
+</section>
+
+<section id="doodeeagency" class="product-detail bg-white">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
+    <div class="detail-visual bg-[#EFE9DE]"><div class="coming-mark coming-large"><span>UPCOMING PRODUCT</span><strong>COMING<br>SOON.</strong></div></div>
+    <div>
+      <p class="product-meta">03 · UPCOMING PRODUCT</p>
+      <h2 class="display mt-4 text-5xl font-extrabold text-navy">DooDeeAgency</h2>
+      <p class="mt-6 text-base leading-8 text-black/60">ผลิตภัณฑ์ที่ยังไม่เปิดให้ใช้งานในขณะนี้ รายละเอียดด้านฟีเจอร์ รูปแบบบริการ และกำหนดเปิดตัวจะประกาศเพิ่มเติมในอนาคต</p>
+      <a href="{% url 'core:contact' %}" class="btn-secondary mt-8">สอบถามข้อมูล</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#F1F5F3] section-pad">
+  <div class="mx-auto max-w-4xl px-5 lg:px-8">
+    <p class="section-kicker">GOOD TO KNOW</p><h2 class="display mt-4 text-4xl font-extrabold text-navy">คำถามที่พบบ่อย</h2>
+    <div class="mt-8 border-y border-line">
+      <div class="faq-item"><button data-faq-button><span>DooDeeClinic กับ DooDeeApp ต่างกันอย่างไร?</span><span data-faq-icon>+</span></button><p data-faq-panel class="hidden">DooDeeClinic เป็นซอฟต์แวร์ 3D สำหรับคลินิก ส่วน DooDeeApp เป็นผลิตภัณฑ์ B2C สำหรับวิเคราะห์ใบหน้าและจำลองภาพแบบ 2D</p></div>
+      <div class="faq-item"><button data-faq-button><span>DooDeeClinic สร้างโมเดล 3D จากการสแกนเองหรือไม่?</span><span data-faq-icon>+</span></button><p data-faq-panel class="hidden">ไม่ใช่ ต้องสร้างโมเดลด้วยแอปสแกนภายนอกก่อน แล้วจึงนำไฟล์โมเดลมาใช้ใน DooDeeClinic</p></div>
+      <div class="faq-item"><button data-faq-button><span>DooDeeAgency เปิดใช้งานแล้วหรือยัง?</span><span data-faq-icon>+</span></button><p data-faq-panel class="hidden">ยังไม่เปิดให้ใช้งาน ปัจจุบันอยู่ในสถานะ Coming soon</p></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
