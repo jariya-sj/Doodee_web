@@ -1,0 +1,4 @@
+html { scroll-behavior:smooth; }
+body { font-family: 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif; }
+.display { font-family: 'Inter', 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif; letter-spacing:-.04em; }
+.grid-noise { background-image: linear-gradient(rgba(15,23,42,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,23,42,.05) 1px,transparent 1px); background-size:32px 32px; }

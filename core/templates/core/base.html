@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html><html lang="th"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}DooDeeVision{% endblock %}</title>
+<meta name="description" content="DooDeeVision — technology for clearer consultation experiences">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'core/css/site.css' %}">
+<script>tailwind.config={theme:{extend:{colors:{ink:'#17212b',mint:'#ccefe7',aqua:'#d9f1f5',sand:'#f5efe5',coral:'#f39b7a',lime:'#ddea8f'}}}}</script>
+</head><body class="bg-[#f8f7f2] text-ink antialiased">
+<header class="sticky top-0 z-50 border-b border-black/10 bg-[#f8f7f2]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+    <a href="{% url 'core:home' %}" class="display text-2xl font-extrabold">doodee<span class="text-emerald-700">vision</span></a>
+    <nav class="hidden items-center gap-7 text-sm font-medium lg:flex">
+      <a class="hover:text-emerald-700" href="{% url 'core:about' %}">เกี่ยวกับเรา</a><a class="hover:text-emerald-700" href="{% url 'core:products' %}">ผลิตภัณฑ์</a><a class="hover:text-emerald-700" href="{% url 'core:partners' %}">พันธมิตรของเรา</a><a class="hover:text-emerald-700" href="{% url 'core:contact' %}">ติดต่อเรา</a>
+    </nav>
+    <div class="hidden lg:block"><a href="{% url 'core:contact' %}" class="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-800">นัดพูดคุยกับเรา ↗</a></div>
+    <button data-menu-button class="rounded-full border border-black/20 px-4 py-2 text-sm lg:hidden">เมนู</button>
+  </div>
+  <div data-mobile-menu class="hidden border-t border-black/10 px-5 py-5 lg:hidden"><div class="grid gap-3 text-sm"><a href="{% url 'core:about' %}">เกี่ยวกับเรา</a><a href="{% url 'core:products' %}">ผลิตภัณฑ์</a><a href="{% url 'core:partners' %}">พันธมิตรของเรา</a><a href="{% url 'core:contact' %}">ติดต่อเรา</a></div></div>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="border-t border-black/10 bg-ink text-white"><div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 lg:grid-cols-3 lg:px-8"><div><div class="display text-3xl font-extrabold">doodeevision</div><p class="mt-3 max-w-sm text-sm text-white/65">เทคโนโลยีที่ช่วยให้การสื่อสารเรื่องใบหน้าชัดเจนขึ้น สำหรับคลินิกและผู้ใช้งานทั่วไป</p></div><div class="text-sm"><p class="mb-3 text-white/45">NAVIGATION</p><div class="grid gap-2"><a href="{% url 'core:about' %}">เกี่ยวกับเรา</a><a href="{% url 'core:products' %}">ผลิตภัณฑ์</a><a href="{% url 'core:partners' %}">พันธมิตรของเรา</a></div></div><div class="text-sm"><p class="mb-3 text-white/45">CONTACT</p><a href="mailto:doodeeontop01@gmail.com" class="underline decoration-white/30 underline-offset-4">doodeeontop01@gmail.com</a><p class="mt-6 text-white/45">© 2026 DooDeeVision. Demo redesign for Django.</p></div></div></footer>
+<script src="{% static 'core/js/site.js' %}"></script></body></html>
